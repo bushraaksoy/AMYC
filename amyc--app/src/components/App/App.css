@@ -1,0 +1,33 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100vw;
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 30px;
+  }
+}

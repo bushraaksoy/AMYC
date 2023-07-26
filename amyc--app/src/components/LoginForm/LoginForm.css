@@ -1,0 +1,75 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  width: 33vw;
+  min-width: 350px;
+  height: 460px;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form > input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #bbb;
+  font-family: "Poppins", sans-serif;
+}
+
+.form > button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 8px;
+  border-radius: 20px;
+  border: none;
+  background-color: #aaa;
+  border: 1px solid #bbb;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.form > button:hover {
+  background-color: #fff;
+}
+
+.form-title > div {
+  font-size: 14px;
+}
+
+.form-title > h1 {
+  font-size: 30px;
+}
+
+.sign-up-link {
+  color: #e5ce00;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+}
+
+.last {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.error-msg {
+  color: #ee0000;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    min-width: 90vw;
+    height: 470px;
+    gap: 6px;
+  }
+}

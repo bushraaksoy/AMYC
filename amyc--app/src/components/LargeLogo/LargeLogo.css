@@ -1,0 +1,9 @@
+.large-img {
+  width: 22%;
+}
+
+@media (max-width: 768px) {
+  .large-img {
+    width: 40vw;
+  }
+}
