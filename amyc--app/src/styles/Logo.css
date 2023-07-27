@@ -1,0 +1,17 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+  padding-left: 10px;
+}
+
+.logo > img {
+  width: 36px;
+}
+
+.logo > h1 {
+  letter-spacing: 0.01rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}

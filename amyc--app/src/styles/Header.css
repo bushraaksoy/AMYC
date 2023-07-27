@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #b8c2cc;
+  font-weight: 500;
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px #ddd;
+  position: sticky;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 10px;
+}
+
+.profile-sect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.profile-sect > img {
+  width: 22px;
+}
+
+#profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.svg-star {
+  width: 22px;
+  fill: yellow;
+}
