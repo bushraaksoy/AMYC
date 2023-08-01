@@ -14,7 +14,8 @@ const UserManagement = () => {
                 {/* <FileTracker/> */}
                 <Title 
                 title="User Management" btnContext='Add New User'/>
-                <Content/>  
+                <Content/>
+                <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
             </div>
         </div>
     )

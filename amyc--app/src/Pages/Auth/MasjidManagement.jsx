@@ -16,6 +16,7 @@ const MasjidManagement = () => {
                 <Title 
                 title="Masjid Management" btnContext='Add Masjid'/>
                 <Content/>  
+                <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
             </div>
         </div>    
     )

@@ -14,7 +14,8 @@ const SchoolRegistration = () => {
                 {/* <FileTracker/> */}
                 <Title 
                 title="School Management" btnContext='Add School'/>
-                <Content/>  
+                <Content/>
+                <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
             </div>
         </div>
    )

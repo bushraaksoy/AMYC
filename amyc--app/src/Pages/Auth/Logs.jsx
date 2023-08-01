@@ -13,6 +13,7 @@ const Logs = () => {
                 {/* <FileTracker/> */}
                 <Title title="System Logs"/>
                 <Content/>  
+                <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
             </div>
         </div>    
     )
