@@ -75,8 +75,9 @@
 
 @media (max-width: 768px) {
   .login {
-    min-width: 90vw;
+    max-width: 700px;
     height: 470px;
     gap: 6px;
   }
 }
+

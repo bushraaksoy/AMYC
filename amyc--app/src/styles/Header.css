@@ -30,6 +30,7 @@
 
 .profile-sect > img {
   width: 22px;
+  cursor: pointer;
 }
 
 #profile-pic {

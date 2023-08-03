@@ -4,7 +4,6 @@ import {useState} from 'react';
 
 const ListItem = ({icon, text, page}) => {
     const [path, setPath] = useState(window.location.pathname);
-    console.log("path: ", path, ", page: ", page)
 
     let active = path == page? 'active': '';
 
