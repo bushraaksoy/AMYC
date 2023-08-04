@@ -14,15 +14,17 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 25px;
 }
 
-.form > input {
+.form > label > input {
+  margin-top: 7px;
   width: 100%;
   padding: 10px 15px;
   border-radius: 20px;
-  border: 1px solid #bbb;
+  border: 1px solid #eee;
   font-family: "Poppins", sans-serif;
+  background-color: rgba(243, 243, 243, 0.89);
 }
 
 .form > button {
@@ -31,14 +33,15 @@
   margin-top: 8px;
   border-radius: 20px;
   border: none;
-  background-color: #aaa;
-  border: 1px solid #bbb;
+  background-color: #7367f0;
+  color: #fff;
   transition: 0.3s;
   font-family: "Poppins", sans-serif;
 }
 
 .form > button:hover {
-  background-color: #fff;
+  box-shadow: 4px 4px 6px #bbb;
+  transform: translate3d(-1px, -1px, 0);
 }
 
 .form-title {
@@ -53,6 +56,7 @@
 
 .form-title > h1 {
   font-size: 30px;
+  margin: 15px 0;
 }
 
 .sign-up-link {
@@ -80,4 +84,3 @@
     gap: 6px;
   }
 }
-

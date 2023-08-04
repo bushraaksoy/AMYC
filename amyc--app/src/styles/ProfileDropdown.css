@@ -6,10 +6,10 @@
 }
 
 .dropdown li {
-  background-color: #deeded;
-  border: 1px solid #999;
+  background-color: #fbfffff8;
+  border: 1px solid #8b8b8b6c;
   font-size: 14px;
-  padding: 5px 15px;
+  padding: 6px 20px;
   border-radius: 2px;
   cursor: pointer;
 }
