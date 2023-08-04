@@ -4,7 +4,7 @@ const useToast = (message, type) => {
     <>
       {toast(message, {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,

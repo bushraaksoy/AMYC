@@ -1,8 +1,8 @@
 import "../styles/App.css";
 import { Route, Routes } from "react-router-dom";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "../Pages/unauth/Login"; // -------unauthenticated pages
-import ResetPass from "../Pages/unauth/ResetPass"; // |
+import ResetPass from "../Pages/unauth/ResetPass"; //  |
 import Home from "../Pages/unauth/Home"; //           |
 import Contact from "../Pages/unauth/Contact"; //     |
 import About from "../Pages/unauth/About"; // ________|
@@ -11,10 +11,8 @@ import SchoolRegistration from "../Pages/Auth/SchoolRegistration"; // |
 import UserManagement from "../Pages/Auth/UserManagement"; //         |
 import MasjidManagement from "../Pages/Auth/MasjidManagement"; //     |
 import Logs from "../Pages/Auth/Logs"; //           __________________|
-import axios from "axios";
 import { LoginContext } from "../Context/LoginContext";
 import { ToastContainer } from "react-toastify";
-import useFetch from "../Hooks/useFetch";
 
 function App() {
   const [isAuthenticated, setIsAuth] = useState(() => {

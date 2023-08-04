@@ -1,7 +1,6 @@
 import "../../styles/LoginForm.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useEffect, useRef, useState } from "react";
-import axios from "axios";
+import { useContext, useRef, useState } from "react";
 import { LoginContext } from "../../Context/LoginContext";
 import { toast } from "react-toastify";
 import useFetch from "../../Hooks/useFetch";
