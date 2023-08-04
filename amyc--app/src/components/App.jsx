@@ -17,10 +17,6 @@ import { ToastContainer } from "react-toastify";
 import useFetch from "../Hooks/useFetch";
 
 function App() {
-  const { data, pending, error } = useFetch(
-    "http://192.168.15.52:8085/api/v1/GetDistricts"
-  );
-  console.log(data, pending, error);
   const [isAuthenticated, setIsAuth] = useState(() => {
     const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
     return savedAuth || false;

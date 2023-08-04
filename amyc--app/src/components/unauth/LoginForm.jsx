@@ -5,58 +5,35 @@ import axios from "axios";
 import { LoginContext } from "../../Context/LoginContext";
 import { toast } from "react-toastify";
 import useFetch from "../../Hooks/useFetch";
+import useToast from "../../Hooks/useToast";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { data, pending, error } = useFetch("http://localhost:3001/users");
+  const {
+    data: users,
+    pending,
+    error,
+  } = useFetch("http://localhost:3001/users");
   const { setIsAuth } = useContext(LoginContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === "" && password === "") {
-      toast.error("Username and Password are required", {
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      });
+      useToast("Username and Password are required", "error");
     } else if (username === "") {
-      toast.error("Username is Required!", {
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      });
+      useToast("Username is Required!", "error");
     } else if (password === "") {
-      toast.error("Password is Required!", {
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      });
+      useToast("Password is Required!", "error");
     }
-    const users = data;
+
     const authUser = users.find(
       (user) => user.email === username && user.password === password
     );
     if (authUser) {
       setIsAuth(true);
-      toast.success("Logged in Successfully", {
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      });
+      useToast("Logged in Successfully", "success");
       navigate("/dashboard");
     } else if (username !== "" && password !== "") {
       toast.error("Invalid Username or Password!", {
