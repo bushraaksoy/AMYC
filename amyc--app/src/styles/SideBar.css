@@ -10,7 +10,6 @@
 }
 
 .menu {
-  display: block;
   width: 20px;
   align-self: flex-start;
   margin-top: 10px;
@@ -27,20 +26,9 @@
 @media (max-width: 768px) {
   .side-bar {
     width: 290px;
-    padding: 1.35rem 36px 1.35rem 25px;
     position: absolute;
     top: 0;
     left: -10px;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .menu {
-    display: block;
-    width: 20px;
-    align-self: flex-start;
-    margin-top: 10px;
-    margin-left: auto;
   }
 }
