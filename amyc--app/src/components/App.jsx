@@ -10,11 +10,29 @@ import Dashboard from "../Pages/Auth/Dashboard"; // ------------------authentica
 import SchoolRegistration from "../Pages/Auth/SchoolRegistration"; // |
 import UserManagement from "../Pages/Auth/UserManagement"; //         |
 import MasjidManagement from "../Pages/Auth/MasjidManagement"; //     |
+import TotalContributions from "../Pages/Auth/TotalContributions"; //  |
+import TotalExpenses from "../Pages/Auth/TotalExpenses"; //            |
+import TotalUsers from "../Pages/Auth/TotalUsers"; //                  |
 import Logs from "../Pages/Auth/Logs"; //           __________________|
 import { LoginContext } from "../Context/LoginContext";
 import { ToastContainer } from "react-toastify";
+import useFetch from "../Hooks/useFetch";
 
 function App() {
+  const options = {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  const { data, pending, error } = useFetch(
+    "http://192.168.2.76:8085/api/v1/GetAllUsers?roleId=1&userId=1",
+    options
+  );
+
+  console.log({ data, pending, error });
+
   const [isAuthenticated, setIsAuth] = useState(() => {
     const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
     return savedAuth || false;
@@ -42,6 +60,12 @@ function App() {
               />
               <Route path="/user-management" element={<UserManagement />} />
               <Route path="/masjid-management" element={<MasjidManagement />} />
+              <Route
+                path="/total-contributions"
+                element={<TotalContributions />}
+              />
+              <Route path="/total-expenses" element={<TotalExpenses />} />
+              <Route path="/total-users" element={<TotalUsers />} />
               <Route path="/logs" element={<Logs />} />
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />

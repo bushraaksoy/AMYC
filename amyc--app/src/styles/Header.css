@@ -14,6 +14,10 @@
   position: sticky;
 }
 
+.menu {
+  display: none;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -42,4 +46,22 @@
 .svg-star {
   width: 22px;
   fill: yellow;
+}
+
+@media (max-width: 768px) {
+  .profile-sect {
+    gap: 10px;
+  }
+  .header {
+    gap: 10px;
+  }
+  .svg-star {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: 20px;
+    align-self: flex-start;
+    margin-top: 10px;
+  }
 }
