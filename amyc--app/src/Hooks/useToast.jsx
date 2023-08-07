@@ -10,7 +10,7 @@ const useToast = (message, type) => {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "colored",
         type: type,
       })}
     </>

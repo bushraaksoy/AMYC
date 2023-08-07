@@ -35,14 +35,7 @@ const LoginForm = () => {
       useToast("Logged in Successfully", "success");
       navigate("/dashboard");
     } else if (username !== "" && password !== "") {
-      toast.error("Invalid Username or Password!", {
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      });
+      useToast("Invalid Username or Password!", "error");
     }
   };
 
