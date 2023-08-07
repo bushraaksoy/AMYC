@@ -1,12 +1,46 @@
 .side-bar {
-  width: 260px;
+  width: 340px;
   background-color: #fff;
   height: 100vh;
-  padding: 1.35rem 1rem;
+  padding: 1.35rem 36px 1.35rem 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: 0.5s ease;
+}
+
+.menu {
+  display: block;
+  width: 20px;
+  align-self: flex-start;
+  margin-top: 10px;
+  transform: translateX(30px);
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.logo-menu {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
+  .side-bar {
+    width: 290px;
+    padding: 1.35rem 36px 1.35rem 25px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu {
+    display: block;
+    width: 20px;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: auto;
+  }
 }

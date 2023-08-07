@@ -33,7 +33,6 @@
 @media (max-width: 768px) {
   .main-content {
     height: 100%;
-
   }
   .expenses-sect {
     display: flex;

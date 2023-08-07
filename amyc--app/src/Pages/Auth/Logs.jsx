@@ -8,9 +8,7 @@ import useFetch from "../../Hooks/useFetch";
 const Logs = () => {
   return (
     <div className="main-content">
-      <div className="left">
-        <SideBar />
-      </div>
+      <SideBar />
       <div className="right">
         <Header />
         {/* <FileTracker/> */}

@@ -14,10 +14,6 @@
   position: sticky;
 }
 
-.menu {
-  display: none;
-}
-
 .title {
   display: flex;
   align-items: center;
@@ -57,11 +53,5 @@
   }
   .svg-star {
     display: none;
-  }
-  .menu {
-    display: block;
-    width: 20px;
-    align-self: flex-start;
-    margin-top: 10px;
   }
 }

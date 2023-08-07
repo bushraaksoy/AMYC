@@ -7,9 +7,7 @@ import Title from "../../components/Auth/Title";
 const TotalUsers = () => {
   return (
     <div className="main-content">
-      <div className="left">
-        <SideBar />
-      </div>
+      <SideBar />
       <div className="right">
         <Header />
         <Title title="Total Users" />

@@ -7,9 +7,7 @@ import Content from "../../components/Auth/Content";
 const TotalContributions = () => {
   return (
     <div className="main-content">
-      <div className="left">
-        <SideBar />
-      </div>
+      <SideBar />
       <div className="right">
         <Header />
         <Title title="Total Contributions" />

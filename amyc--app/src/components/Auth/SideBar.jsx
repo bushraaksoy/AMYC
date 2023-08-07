@@ -7,27 +7,26 @@ import dollar from "../../assets/dollar.svg";
 import twoUsers from "../../assets/two-users.svg";
 import userPlus from "../../assets/user-plus.svg";
 import key from "../../assets/key.svg";
-import { forwardRef, useImperativeHandle, useState } from "react";
+import menuDot from "../../assets/menuDot.svg";
+import { useState } from "react";
 
-const SideBar = forwardRef((props, ref) => {
+const SideBar = () => {
   const [showing, setShowing] = useState(true);
 
   const styles = {
-    display: showing ? "block" : "none",
+    transform: showing ? "translateX(0px)" : "translateX(-250px)",
   };
 
-  useImperativeHandle(ref, () => ({
-    show() {
-      setShowing(true);
-    },
-    hide() {
-      setShowing(false);
-    },
-  }));
+  const toggleShow = () => {
+    setShowing(showing ? false : true);
+  };
 
   return (
     <div style={styles} className="side-bar">
-      <Logo />
+      <div className="logo-menu">
+        <Logo />
+        <img onClick={() => toggleShow()} className="menu" src={menuDot} />
+      </div>
       <div className="list-items">
         <ListItem
           icon={<img width="22px" src={home} placeholder="icon" />}
@@ -76,6 +75,6 @@ const SideBar = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default SideBar;
