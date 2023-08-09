@@ -27,15 +27,19 @@ const LoginForm = () => {
       useToast("Password is Required!", "error");
     }
 
-    const authUser = users.find(
-      (user) => user.email === username && user.password === password
-    );
-    if (authUser) {
-      setIsAuth(true);
-      useToast("Logged in Successfully", "success");
-      navigate("/dashboard");
-    } else if (username !== "" && password !== "") {
-      useToast("Invalid Username or Password!", "error");
+    if (!users) {
+      useToast(error, "error");
+    } else {
+      const authUser = users.find(
+        (user) => user.email === username && user.password === password
+      );
+      if (authUser) {
+        setIsAuth(true);
+        useToast("Logged in Successfully", "success");
+        navigate("/dashboard");
+      } else if (username !== "" && password !== "") {
+        useToast("Invalid Username or Password!", "error");
+      }
     }
   };
 
@@ -97,8 +101,6 @@ const LoginForm = () => {
       <Link to="/forgot-password" className="last forgot-password">
         Forgot Password?
       </Link>
-      <>{pending && <p>Loading...</p>}</>
-      <>{error && <p>error</p>}</>
     </div>
   );
 };

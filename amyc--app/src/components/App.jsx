@@ -19,19 +19,19 @@ import { ToastContainer } from "react-toastify";
 import useFetch from "../Hooks/useFetch";
 
 function App() {
-  const options = {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  const { data, pending, error } = useFetch(
-    "http://192.168.2.76:8085/api/v1/GetAllUsers?roleId=1&userId=1",
-    options
-  );
+  // const options = {
+  //   method: "POST",
+  //   mode: "no-cors",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // };
+  // const { data, pending, error } = useFetch(
+  //   "http://192.168.2.76:8085/api/v1/GetAllUsers?roleId=1&userId=1",
+  //   options
+  // );
 
-  console.log({ data, pending, error });
+  // console.log({ data, pending, error });
 
   const [isAuthenticated, setIsAuth] = useState(() => {
     const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
