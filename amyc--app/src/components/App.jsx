@@ -17,22 +17,10 @@ import Logs from "../Pages/Auth/Logs"; //           __________________|
 import { LoginContext } from "../Context/LoginContext";
 import { ToastContainer } from "react-toastify";
 import useFetch from "../Hooks/useFetch";
+import SideBar from "./Auth/SideBar";
+import Header from "./Auth/Header";
 
 function App() {
-  // const options = {
-  //   method: "POST",
-  //   mode: "no-cors",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  // };
-  // const { data, pending, error } = useFetch(
-  //   "http://192.168.2.76:8085/api/v1/GetAllUsers?roleId=1&userId=1",
-  //   options
-  // );
-
-  // console.log({ data, pending, error });
-
   const [isAuthenticated, setIsAuth] = useState(() => {
     const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
     return savedAuth || false;
@@ -50,39 +38,52 @@ function App() {
   return (
     <LoginContext.Provider value={{ isAuthenticated, setIsAuth }}>
       <div className="App">
-        <Routes>
-          {isAuthenticated ? (
-            <>
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route
-                path="/school-registration"
-                element={<SchoolRegistration />}
-              />
-              <Route path="/user-management" element={<UserManagement />} />
-              <Route path="/masjid-management" element={<MasjidManagement />} />
-              <Route
-                path="/total-contributions"
-                element={<TotalContributions />}
-              />
-              <Route path="/total-expenses" element={<TotalExpenses />} />
-              <Route path="/total-users" element={<TotalUsers />} />
-              <Route path="/logs" element={<Logs />} />
+        {isAuthenticated ? (
+          <>
+            <div className="main-content">
+              <SideBar />
+              <div className="right">
+                <Header />
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route
+                    path="/school-registration"
+                    element={<SchoolRegistration />}
+                  />
+                  <Route path="/user-management" element={<UserManagement />} />
+                  <Route
+                    path="/masjid-management"
+                    element={<MasjidManagement />}
+                  />
+                  <Route
+                    path="/total-contributions"
+                    element={<TotalContributions />}
+                  />
+                  <Route path="/total-expenses" element={<TotalExpenses />} />
+                  <Route path="/total-users" element={<TotalUsers />} />
+                  <Route path="/logs" element={<Logs />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+                <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
+              </div>
+            </div>
+
+            {/* <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/forgot-password" element={<ResetPass />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </>
-          ) : (
-            <>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/forgot-password" element={<ResetPass />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </>
-          )}
-        </Routes>
+            </Routes> */}
+          </>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ResetPass />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        )}
       </div>
       <ToastContainer />
     </LoginContext.Provider>

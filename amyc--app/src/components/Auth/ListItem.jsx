@@ -13,7 +13,8 @@ const ListItem = ({icon, text, page}) => {
 
     return (
         <Link onClick={handleClick} to={page} className={`list-item ${active}`}>
-            {icon} <span>{text}</span>
+            {icon} 
+            <span>{text}</span>
         </Link>
     )
 }

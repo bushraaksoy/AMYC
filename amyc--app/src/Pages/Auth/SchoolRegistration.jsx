@@ -7,16 +7,10 @@ import "../../styles/MainContent.css";
 
 const SchoolRegistration = () => {
   return (
-    <div className="main-content">
-      <SideBar />
-      <div className="right">
-        <Header />
-        {/* <FileTracker/> */}
-        <Title title="School Management" btnContext="Add School" />
-        <Content />
-        <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
-      </div>
-    </div>
+    <>
+      <Title title="School Management" btnContext="Add School" />
+      <Content />
+    </>
   );
 };
 

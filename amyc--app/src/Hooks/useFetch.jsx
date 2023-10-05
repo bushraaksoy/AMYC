@@ -1,28 +1,24 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const useFetch = (url, options) => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState(null);
   const [pending, setPending] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url, options)
-      .then((res) => {
-        if (!res.ok) {
-          throw Error("Could not fetch the data for that resource");
-        }
-        return res.json();
-      })
-      .then((data) => {
+    axios
+      .get(url, options)
+      .then((response) => {
         setPending(false);
         setError(null);
-        setData(data);
+        setData(response.data);
       })
       .catch((err) => {
         setPending(false);
         setError(err.message);
       });
-  }, [url]);
+  }, [url, options]);
 
   return { data, pending, error };
 };

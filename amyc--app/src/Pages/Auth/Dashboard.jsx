@@ -8,20 +8,15 @@ import "../../styles/MainContent.css";
 
 const Dashboard = () => {
   return (
-    <div className="main-content">
-      <SideBar />
-      <div className="right">
-        <Header />
-        <div className="dash-content">
-          <Statistics />
-          <div className="expenses-sect">
-            <Expenses />
-            <RevenueReport />
-          </div>
+    <>
+      <div className="dash-content">
+        <Statistics />
+        <div className="expenses-sect">
+          <Expenses />
+          <RevenueReport />
         </div>
-        <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
       </div>
-    </div>
+    </>
   );
 };
 

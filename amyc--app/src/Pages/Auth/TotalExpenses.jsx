@@ -6,15 +6,10 @@ import Content from "../../components/Auth/Content";
 
 const TotalExpenses = () => {
   return (
-    <div className="main-content">
-      <SideBar />
-      <div className="right">
-        <Header />
-        <Title title="Total Expenses" />
-        <Content />
-        <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
-      </div>
-    </div>
+    <>
+      <Title title="Total Expenses" />
+      <Content />
+    </>
   );
 };
 

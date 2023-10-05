@@ -7,16 +7,10 @@ import "../../styles/MainContent.css";
 
 const UserManagement = () => {
   return (
-    <div className="main-content">
-      <SideBar />
-      <div className="right">
-        <Header />
-        {/* <FileTracker/> */}
-        <Title title="User Management" btnContext="Add New User" />
-        <Content />
-        <div>COPYRIGHT © 2022AMYC, All rights Reserved | SoftNet</div>
-      </div>
-    </div>
+    <>
+      <Title title="User Management" btnContext="Add New User" />
+      <Content />
+    </>
   );
 };
 
